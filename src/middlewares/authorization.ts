@@ -5,7 +5,7 @@ export const authorization = (roles: boolean[]) => {
     if (!res.locals.user) {
       return res.render('./401');
     }
-    if (!roles.includes(!roles.includes(res.locals.user.role))) {
+    if (!roles.includes(res.locals.user.role)) {
       return res.render('./404');
     }
     next();
