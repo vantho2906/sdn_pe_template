@@ -6,7 +6,7 @@ const authentication = async (
   next: NextFunction
 ) => {
   if (!res.locals.user) {
-    return res.redirect('/auth/login');
+    return res.redirect('/login');
   }
   next();
 };
